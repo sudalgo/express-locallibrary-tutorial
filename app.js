@@ -23,7 +23,7 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 // Set up mongoose connection
 const dev_db_url = "mongodb://127.0.0.1:27017/locallibrary";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGO_URL || dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {
